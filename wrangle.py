@@ -12,3 +12,7 @@ df = prep_data(raw)
 # 2. Add a data dictionary that defines all fields used in model or analysis
 #        with explanation of why that field? Why one field over another, etc...
 
+# Milestones before Friday:
+# 1. drop nulls
+# 2. Scale
+# 3. Super basic Model
