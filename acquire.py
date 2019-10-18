@@ -29,16 +29,27 @@ def get_zillow_data():
     df = pd.read_sql(query, url)
     return df
 
-def get_data():
+def get_data(refresh = False):
     """
         reads from .csv or issues slq query, writes that sql as a .csv, and returns the data.
+        run get_data() to get a dataframe from
+        run get_data(refresh = True) to 
     """
     filename = "./zillow.csv"
 
-    if path.exists(filename):
-        # print(f'Reading data from {filename}')
+    if path.exists(filename) and refresh:
+        # delete file
+        os.remove(filename)
+        print(f'The old version of {filename} is now deleted')
+
+        # delete filename
+        write_csv_of_data()
+        print(f"A new {filename} is created from a fresh SQL query")
+        
+    elif path.exists(filename):
+        print(f'Data read from {filename}')
     else:
-        # print(f'Reading data from query, writing to {filename}, and returning the dataframe')
+        print(f'Reading data from SQL, writing to {filename}, and returning the dataframe')
         write_csv_of_data()
 
     # Return the dataframe read from the csv
