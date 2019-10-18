@@ -1,18 +1,23 @@
 from acquire import get_data
 from prep import prep_data
 
+# Get the raw data from .csv or MySQL query
 raw = get_data()
+
+# Remove nulls
 df = prep_data(raw)
 
-# TO DOs
-
-# 1. plot distributions of individual variables to identify outliers
-#        beds vs. baths, baths vs. sqft, sqft vs, price, etc...
-
-# 2. Add a data dictionary that defines all fields used in model or analysis
-#        with explanation of why that field? Why one field over another, etc...
-
 # Milestones before Friday:
-# 1. drop nulls
 # 2. Scale
 # 3. Super basic Model
+
+df.info()
+df.describe()
+
+# First pass for outlier detection:
+# Do the value counts and distribution make sense?
+# Is there anything way out of line here?
+df.bedrooms.value_counts()      # encode as discrete
+df.bathrooms.value_counts()     # encode as discrete
+df.sqft.value_counts()          # can bin or scale
+df.taxvalue.value_counts()      # scale this (also our target variable)

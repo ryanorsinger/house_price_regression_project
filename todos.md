@@ -1,0 +1,3 @@
+
+
+- Add a data dictionary that defines all fields used in model or analysis with explanations of why each field? Why one field over another, etc...

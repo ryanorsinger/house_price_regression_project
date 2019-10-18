@@ -17,3 +17,4 @@ def prep_data(df):
     df = df.rename(columns=rename_columns)
 
     return df
+
