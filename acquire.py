@@ -32,7 +32,7 @@ def get_zillow_data():
 def get_data(refresh = False):
     """
         reads from .csv or issues slq query, writes that sql as a .csv, and returns the data.
-        run get_data() to get a dataframe from
+        run get_data() to return a dataframe from zillow.csv or to create it from a SQL query 
         run get_data(refresh = True) to 
     """
     filename = "./zillow.csv"
