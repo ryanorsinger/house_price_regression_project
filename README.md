@@ -19,7 +19,7 @@ Additional information we need outside of the linear model:
 1. A report (in the form of a presentation, both verbal and through a slides)
 2. A github repository containing your jupyter notebook that walks through the pipeline along with the .py files necessary to reproduce your model.
 
-# Planning
+# Planning Stage
 
 ## Overall Plan:
 - State initial hypotheses of drivers of tax value
@@ -35,6 +35,10 @@ Additional information we need outside of the linear model:
 
 ## Minimum Viable Product 
 - Predictive model for values of single unit properties sold in 2017 May-June. 
+- Presentation report explaining drivers of property values for single unit properties sold 2017 May-June
+- Add county, state for each property
+- Visualize and report on the distribution of tax rates for each county
+
 
 ## Initial Hypotheses and Ideas
 - bathroom count correlates with bedroom count
