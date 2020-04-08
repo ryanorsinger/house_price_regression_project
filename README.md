@@ -19,8 +19,25 @@ Additional information we need outside of the linear model:
 1. A report (in the form of a presentation, both verbal and through a slides)
 2. A github repository containing your jupyter notebook that walks through the pipeline along with the .py files necessary to reproduce your model.
 
+# Planning
 
-## Pipeline
-- Plan: Gin up a model as quickly as possible for square feet of the home, number of bedrooms, and number of bathrooms in order to estimate each property's assessed value - the "taxvaluedollarcnt".
-- Acquire: Select taxvaluedollarcnt, #bedrooms, #bathrooms, and sqft from the properties_2017 table joined w/ propeprtylandusetype table. Filter on propertylandusetype and 
-- Prepare: 
+## Overall Plan:
+- State initial hypotheses of drivers of tax value
+- Get an MVP out the door w/ a subset of features 
+- Conduct deeper analysis 
+
+## Project Deliverables
+- Report (verbal, slides)
+- Reproducible data pipeline
+- Jupyter notebook that consumes the data pipeline and produces a predictive model
+- Add county and state data for each address
+- Demonstrate the distribution of tax rates for each county. The data has the tax amounts and tax values for each home, so the rate is a simple calculation. This is separate from the predicted tax values we'll get from the model.
+
+## Minimum Viable Product 
+- Predictive model for values of single unit properties sold in 2017 May-June. 
+
+## Initial Hypotheses and Ideas
+- bathroom count correlates with bedroom count
+- bed/bath count both correlate with square footage
+- A feature like squarefootage per room may be a useful feature, since the initial 3 features are likely tightly correlated w/ eachother
+- Location will be a strong driver of tax value
