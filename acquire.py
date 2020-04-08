@@ -17,7 +17,7 @@ def get_zillow_data():
     # taxvaluedollarcnt
 
     # Use a double "%" in order to escape %'s default string formatting behavior.
-    query = """SELECT bathroomcnt, bedroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt
+    query = """SELECT bathroomcnt, bedroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, fips
         from properties_2017 
         join predictions_2017 using(parcelid)
         join propertylandusetype using(propertylandusetypeid)

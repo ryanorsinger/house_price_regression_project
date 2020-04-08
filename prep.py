@@ -5,6 +5,7 @@ def prep_data(df):
     df = df.dropna()
     df = df[df.bathroomcnt != 0]
     df = df[df.bedroomcnt != 0]
+
     df.drop(["Unnamed: 0"], axis=1, inplace=True)
 
     rename_columns = {
@@ -16,5 +17,6 @@ def prep_data(df):
 
     df = df.rename(columns=rename_columns)
 
-    return df
+    df.fips = df.fips.astype(int)
 
+    return df
